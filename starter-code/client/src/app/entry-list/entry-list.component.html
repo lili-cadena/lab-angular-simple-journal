@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let entry of entries">
+      <a [routerLink]="['/detail', entry._id]">Detail</a>
+    {{entry.title}}
+    {{entry.date | date:'dd MMMM yyyy'}}
+  </li>
+</ul>
+
+

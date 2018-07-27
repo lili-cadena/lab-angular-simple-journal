@@ -30,6 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(layouts);
 
 const index = require('./routes/index');
+const journalEntries = require('./routes/api/journal-entries');
+app.use('/', journalEntries);
 app.use('/', index);
 
 app.all('/*', function (req, res) {
